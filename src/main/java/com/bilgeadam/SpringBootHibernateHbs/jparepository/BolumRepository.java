@@ -14,8 +14,8 @@ import com.bilgeadam.SpringBootHibernateHbs.model.Bolum;
 @Transactional
 public interface BolumRepository extends JpaRepository<Bolum, Long>
 {
-	@Query(name = "findByKonuName", value = "SELECT * FROM public.bolum WHERE NAME LIKE :NAME", nativeQuery = true)
-	public List<Bolum> findByKonuName(@Param("NAME") String name);
+	@Query(name = "findByBolumName", value = "SELECT * FROM public.bolum WHERE NAME LIKE :NAME", nativeQuery = true)
+	public List<Bolum> findByBolumName(@Param("NAME") String name);
 
 	public List<Bolum> findAllByNAMELike(String name);
 	
